@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProDigy Infotech</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.4s, box-shadow 0.4s;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background: #222;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      color: #ff6600;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff6600;
+      transform: scale(1.1);
+    }
+
+    /* Dummy content for scrolling */
+    section {
+      height: 100vh;
+      padding: 80px;
+    }
+
+    section:nth-child(odd) {
+      background: #f4f4f4;
+    }
+
+    section:nth-child(even) {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="logo">ProDigy Infotech</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Sections -->
+  <section id="home">
+    <h1>Welcome to ProDigy Infotech</h1>
+    <p>Scroll down to see navigation bar effect...</p>
+  </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>We specialize in web solutions.</p>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>We offer modern digital solutions.</p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Get in touch at prodigy@info.com</p>
+  </section>
+
+  <!-- JavaScript for scroll effect -->
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
